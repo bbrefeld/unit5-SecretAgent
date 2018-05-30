@@ -16,8 +16,8 @@ body, a {
 .container {
   max-width: 960px;
   margin: 0 auto;
-  display:/ flex;
-  align-items:/ center;
+  display: flex;
+  align-items: center;
 }
 
 /* Header styling */
@@ -88,9 +88,9 @@ nav {
 }
 
 nav ul {
-  display:/ flex;
-  justify-content:/ space-between;
-  align-items:/ center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 0.75rem 0;
 }
@@ -101,9 +101,9 @@ nav ul {
 
 /* Main styling */
 main .container {
-  display:/ flex;
-  justify-content:/ space-between;
-  align-items:/ center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 960px;
 }
 
@@ -139,7 +139,7 @@ main .container figure figcaption {
 }
 
 main address {
-  display:/ inline-block;
+  display: inline-block;
   width: 35%;
   margin-top: 3rem;
 }
@@ -180,22 +180,46 @@ footer {
 }
 
 /* no-flexbox styling */
-#websitetop img, #websitetop h1 {
+.no-flexbox #websitetop img, #websitetop h1 {
   display: inline-block;
 }
 
-#websitetop h1 {
+.no-flexbox #websitetop h1 {
   position: relative;
   bottom: 17px;
 }
 
-#news {
+.no-flexbox #news {
   margin-top: 0px;
   position: relative;
   top: 180px;
 }
 
+.no-flexbox header nav {
+  text-align: center;
+}
 
+.no-flexbox header nav ul li {
+  display: inline-block;
+  padding: 0 10px 0 10px;
+}
+
+.no-flexbox main .container {
+  text-align: center;
+}
+
+.no-flexbox main .container figure {
+  display: inline-block;
+}
+
+.no-flexbox main #addresses address {
+  display: inline-block;
+  text-align: center;
+}
+
+.no-flexbox main #addresses address span {
+  padding-left: 0;
+}
 
 
 /* Tablet CSS */
@@ -207,7 +231,7 @@ footer {
 }
 
 main .container {
-  flex-wrap:/ wrap;
+  flex-wrap: wrap;
   padding: 0rem 2rem;
 }
 
@@ -227,12 +251,17 @@ nav ul {
   padding: 14px 36px;
 }
 
+/* no flexbox tablet */
+.no-flexbox header nav ul {
+  padding: 14px 0px;
+}
+
 }
 
 
 
 /* Phone styling */
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
 
 #promotion {
   height: 15rem;
@@ -270,7 +299,7 @@ nav ul {
   font-size: 14px;
 }
 
-nav ul li {
+body header nav ul li {
   display: none;
 }
 
@@ -312,6 +341,11 @@ main .container address {
 
 footer .container p {
   margin: 0 auto;
+}
+
+/* noflexbox styling */
+.no-flexbox header #news {
+  margin-top: 0;
 }
 
 }
